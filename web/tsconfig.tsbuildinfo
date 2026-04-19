@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/planeditor.tsx","./src/data/defaultmiyakoplan.ts","./src/hooks/usetravelplans.ts","./src/lib/localplans.ts","./src/lib/supabase.ts","./src/types/plan.ts"],"version":"5.7.3"}

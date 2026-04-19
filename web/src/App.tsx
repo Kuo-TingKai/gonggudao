@@ -30,20 +30,11 @@ export default function App() {
               編輯景點與順序、費用、交通通勤與票務 — 資料來源整理自宮古島攻略筆記
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            {hook.mode === "cloud" ? (
-              <span className="rounded-full bg-emerald-100 px-3 py-1 font-medium text-emerald-800">
-                Supabase 雲端
-              </span>
-            ) : (
-              <span className="rounded-full bg-amber-100 px-3 py-1 font-medium text-amber-900">
-                本機儲存（未設定環境變數）
-              </span>
-            )}
-            {hook.error ? (
+          {hook.error ? (
+            <div className="flex flex-wrap items-center gap-2 text-xs">
               <span className="rounded-full bg-rose-100 px-3 py-1 text-rose-800">{hook.error}</span>
-            ) : null}
-          </div>
+            </div>
+          ) : null}
         </div>
       </header>
 
@@ -101,18 +92,6 @@ export default function App() {
                 新增空白行程
               </button>
             </div>
-          </div>
-
-          <div className="rounded-2xl border border-emerald-100 bg-emerald-50/50 p-4 text-sm text-emerald-950">
-            <p className="font-semibold text-emerald-900">GitHub Pages</p>
-            <p className="mt-2 leading-relaxed">
-              建置後網址為{" "}
-              <code className="rounded bg-white/80 px-1 py-0.5 text-xs">
-                https://&lt;帳號&gt;.github.io/gonggudao/
-              </code>
-              ，請在 Supabase 專案設定允許此來源（Authentication → URL
-              configuration）。
-            </p>
           </div>
         </aside>
 
