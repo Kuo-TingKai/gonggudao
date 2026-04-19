@@ -84,7 +84,14 @@ export function PlanEditor({
     [scheduleSave],
   );
 
-  useEffect(() => () => timer.current && clearTimeout(timer.current), []);
+  useEffect(() => {
+    return () => {
+      if (timer.current) {
+        clearTimeout(timer.current);
+        timer.current = null;
+      }
+    };
+  }, []);
 
   const totalTwd = useMemo(() => sumExpenses(working.data.expenses), [working.data.expenses]);
 
